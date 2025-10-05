@@ -199,25 +199,49 @@
     </footer>
 
     <script>
-        // --- 1. Quiz Data ---
-        const QUIZ_DATA = [
-            {
-                question: "What's your pet's favorite weekend activity?",
-                options: ["Lounging on the sofa 😴 (Cozy)", "Chasing balls at the park 🏃 (Sporty)", "Patrolling the neighborhood 🕵️ (Classic)", "Attending a family party 🎉 (Dapper)"],
-                styles: ["Cozy", "Sporty", "Classic", "Dapper"]
-            },
-            {
-                question: "How does your pet react to a new person?",
-                options: ["Cautiously watches from a distance.", "Jumps up excitedly for pets!", "Sniffs them thoroughly, then wags.", "Presents a toy or performs a trick."],
-                styles: ["Classic", "Sporty", "Cozy", "Dapper"]
-            },
-             {
-                question: "If your pet were a fabric, what would it be?",
-                options: ["Soft, fluffy fleece.", "Durable, breathable canvas.", "Classic denim.", "Shiny velvet or silk."],
-                styles: ["Cozy", "Sporty", "Classic", "Dapper"]
-            }
-            // You would add 4 more questions here for a total of 7
-        ];
+      <script>
+    // --- 1. Quiz Data ---
+    const QUIZ_DATA = [
+        {
+            question: "What's your pet's favorite weekend activity?",
+            options: ["Lounging on the sofa 😴 (Cozy)", "Chasing balls at the park 🏃 (Sporty)", "Patrolling the neighborhood 🕵️ (Classic)", "Attending a family party 🎉 (Dapper)"],
+            styles: ["Cozy", "Sporty", "Classic", "Dapper"]
+        },
+        {
+            question: "How does your pet react to a new person?",
+            options: ["Cautiously watches from a distance.", "Jumps up excitedly for pets!", "Sniffs them thoroughly, then wags.", "Presents a toy or performs a trick."],
+            styles: ["Classic", "Sporty", "Cozy", "Dapper"]
+        },
+        {
+            question: "If your pet were a fabric, what would it be?",
+            options: ["Soft, fluffy fleece.", "Durable, breathable canvas.", "Classic denim.", "Shiny velvet or silk."],
+            styles: ["Cozy", "Sporty", "Classic", "Dapper"]
+        },
+        {
+            question: "What is your pet's ideal traveling method?",
+            options: ["Snuggled in a cozy carrier bag, close to you.", "Hanging their head out the car window, wind in their fur.", "Calmly riding in the back seat, observing traffic.", "A stylish stroll with a designer leash and collar."],
+            styles: ["Cozy", "Sporty", "Classic", "Dapper"]
+        },
+        {
+            question: "When picking out a new accessory, which detail matters most?",
+            options: ["The softness of the material (Cozy)", "The reflectiveness or visibility (Sporty)", "The quality and durability (Classic)", "The unique pattern or bold color (Dapper)"],
+            styles: ["Cozy", "Sporty", "Classic", "Dapper"]
+        },
+        {
+            question: "How does your pet handle unexpected rain outside?",
+            options: ["Refuses to go out and hides under the blankets.", "Dashes out anyway, turning mud into an obstacle course.", "Waits patiently for a rain jacket or umbrella.", "Insists on wearing their fashionable raincoat."],
+            styles: ["Cozy", "Sporty", "Classic", "Dapper"]
+        },
+        {
+            question: "Which of these sounds makes your pet's ears perk up the fastest?",
+            options: ["The crinkle of a soft blanket being adjusted.", "The jingle of a leash being picked up.", "The rustle of a treat bag being opened.", "A polite compliment from a neighbor."],
+            styles: ["Cozy", "Sporty", "Classic", "Dapper"]
+        }
+    ];
+
+    // --- 2. State Variables ---
+    // ... (rest of your script continues here)
+</script>
         
         // --- 2. State Variables ---
         let currentQuestionIndex = 0;
