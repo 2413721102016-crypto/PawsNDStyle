@@ -14,7 +14,7 @@ const pawsonaData = {
             // Ensure path is correct, e.g., 'images/Cloud_Snuggle_Hoodie.jpg'
             { img: "Cloud_Snuggle_Hoodie.jpg", name: "Cloud Snuggle Hoodie", price: "₹799" },
             { img: "Pastel_Bow.jpg" , name: "Pastel Bow Pack", price: "₹299" },
-            { img: "Chill-Blanket.jpg" , name: "Fleece Lounge Blanket", price: "₹499" },
+            { img: "Chill_Blanket.jpg" , name: "Fleece Lounge Blanket", price: "₹499" },
         ],
         bundle: "Cozy Combo: Hoodie + Bow Pack ₹999 (save ₹100)"
     },
@@ -38,7 +38,7 @@ const pawsonaData = {
         colorClass: "result-color-playground",
         products: [
             // FIX: Changed 'BreathableVesst.jpg' to 'BreathableVest.jpg'
-            { img: "BreathableVest.jpg", name: "Breathable Sport Vest", price: "₹899" }, 
+            { img: "Breathable_Vest.jpg", name: "Breathable Sport Vest", price: "₹899" }, 
             // The file name here was clean but a note mentioned a potential variation. Sticking with the clean one.
             { img: "Reflective_harness.jpg", name: "Reflective Harness", price: "₹699" }, 
             { img: "Treat_Ball.jpg", name: "Thooth Cleaning Ball Pack", price: "₹299" },
