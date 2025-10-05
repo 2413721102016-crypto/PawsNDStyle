@@ -43,8 +43,8 @@
         main {
             display: flex;
             justify-content: center;
-            align-items: flex-start; /* Align content to the top */
-            min-height: calc(100vh - 120px); /* Adjust based on header/footer height */
+            align-items: flex-start;
+            min-height: calc(100vh - 120px); 
             padding: 2rem 1rem;
             background-color: #f7f7f7;
         }
@@ -58,7 +58,6 @@
             width: 100%;
         }
         
-        /* Custom Tailwind class color definitions */
         .text-coral-button {
             color: var(--coral-button);
         }
@@ -73,7 +72,7 @@
         }
 
         .btn-primary:hover:not(:disabled) {
-            background-color: #E05858; /* Slightly darker coral */
+            background-color: #E05858;
         }
         
         .btn-primary:disabled {
@@ -105,7 +104,7 @@
         .progress-fill {
             height: 100%;
             background-color: var(--coral-button);
-            width: 0%; /* Controlled by JS */
+            width: 0%; 
             transition: width 0.3s ease-in-out;
         }
         
@@ -130,7 +129,7 @@
         }
         
         .option-group button.selected {
-            background-color: #FFF3F3; /* Light pink background */
+            background-color: #FFF3F3; 
             border-color: var(--coral-button);
             font-weight: bold;
         }
@@ -154,8 +153,7 @@
         <section id="intro-card" class="quiz-card text-center">
             <h1 class="text-3xl font-extrabold text-coral-button mb-3">Find Your Paw-sona 🐾</h1>
             <p class="text-xl text-gray-700 mb-6 font-semibold">3 minutes, 7 fun Qs — discover your pet's signature style!</p>
-            <p class="mb-8 text-gray-600">This quick style quiz helps match your pet's unique personality to their perfect
-                wardrobe. Let's find their true style!</p>
+            <p class="mb-8 text-gray-600">This quick style quiz helps match your pet's unique personality to their perfect wardrobe. Let's find their true style!</p>
             <button id="start-quiz-btn" class="btn-primary">Start Quiz →</button>
         </section>
 
@@ -199,53 +197,48 @@
     </footer>
 
     <script>
-      <script>
-    // --- 1. Quiz Data ---
-    const QUIZ_DATA = [
-        {
-            question: "What's your pet's favorite weekend activity?",
-            options: ["Lounging on the sofa 😴 (Cozy)", "Chasing balls at the park 🏃 (Sporty)", "Patrolling the neighborhood 🕵️ (Classic)", "Attending a family party 🎉 (Dapper)"],
-            styles: ["Cozy", "Sporty", "Classic", "Dapper"]
-        },
-        {
-            question: "How does your pet react to a new person?",
-            options: ["Cautiously watches from a distance.", "Jumps up excitedly for pets!", "Sniffs them thoroughly, then wags.", "Presents a toy or performs a trick."],
-            styles: ["Classic", "Sporty", "Cozy", "Dapper"]
-        },
-        {
-            question: "If your pet were a fabric, what would it be?",
-            options: ["Soft, fluffy fleece.", "Durable, breathable canvas.", "Classic denim.", "Shiny velvet or silk."],
-            styles: ["Cozy", "Sporty", "Classic", "Dapper"]
-        },
-        {
-            question: "What is your pet's ideal traveling method?",
-            options: ["Snuggled in a cozy carrier bag, close to you.", "Hanging their head out the car window, wind in their fur.", "Calmly riding in the back seat, observing traffic.", "A stylish stroll with a designer leash and collar."],
-            styles: ["Cozy", "Sporty", "Classic", "Dapper"]
-        },
-        {
-            question: "When picking out a new accessory, which detail matters most?",
-            options: ["The softness of the material (Cozy)", "The reflectiveness or visibility (Sporty)", "The quality and durability (Classic)", "The unique pattern or bold color (Dapper)"],
-            styles: ["Cozy", "Sporty", "Classic", "Dapper"]
-        },
-        {
-            question: "How does your pet handle unexpected rain outside?",
-            options: ["Refuses to go out and hides under the blankets.", "Dashes out anyway, turning mud into an obstacle course.", "Waits patiently for a rain jacket or umbrella.", "Insists on wearing their fashionable raincoat."],
-            styles: ["Cozy", "Sporty", "Classic", "Dapper"]
-        },
-        {
-            question: "Which of these sounds makes your pet's ears perk up the fastest?",
-            options: ["The crinkle of a soft blanket being adjusted.", "The jingle of a leash being picked up.", "The rustle of a treat bag being opened.", "A polite compliment from a neighbor."],
-            styles: ["Cozy", "Sporty", "Classic", "Dapper"]
-        }
-    ];
-
-    // --- 2. State Variables ---
-    // ... (rest of your script continues here)
-</script>
+        // --- 1. Quiz Data (7 Questions) ---
+        const QUIZ_DATA = [
+            {
+                question: "What's your pet's favorite weekend activity?",
+                options: ["Lounging on the sofa 😴 (Cozy)", "Chasing balls at the park 🏃 (Sporty)", "Patrolling the neighborhood 🕵️ (Classic)", "Attending a family party 🎉 (Dapper)"],
+                styles: ["Cozy", "Sporty", "Classic", "Dapper"]
+            },
+            {
+                question: "How does your pet react to a new person?",
+                options: ["Cautiously watches from a distance.", "Jumps up excitedly for pets!", "Sniffs them thoroughly, then wags.", "Presents a toy or performs a trick."],
+                styles: ["Classic", "Sporty", "Cozy", "Dapper"]
+            },
+            {
+                question: "If your pet were a fabric, what would it be?",
+                options: ["Soft, fluffy fleece.", "Durable, breathable canvas.", "Classic denim.", "Shiny velvet or silk."],
+                styles: ["Cozy", "Sporty", "Classic", "Dapper"]
+            },
+            {
+                question: "What is your pet's ideal traveling method?",
+                options: ["Snuggled in a cozy carrier bag, close to you.", "Hanging their head out the car window, wind in their fur.", "Calmly riding in the back seat, observing traffic.", "A stylish stroll with a designer leash and collar."],
+                styles: ["Cozy", "Sporty", "Classic", "Dapper"]
+            },
+            {
+                question: "When picking out a new accessory, which detail matters most?",
+                options: ["The softness of the material (Cozy)", "The reflectiveness or visibility (Sporty)", "The quality and durability (Classic)", "The unique pattern or bold color (Dapper)"],
+                styles: ["Cozy", "Sporty", "Classic", "Dapper"]
+            },
+            {
+                question: "How does your pet handle unexpected rain outside?",
+                options: ["Refuses to go out and hides under the blankets.", "Dashes out anyway, turning mud into an obstacle course.", "Waits patiently for a rain jacket or umbrella.", "Insists on wearing their fashionable raincoat."],
+                styles: ["Cozy", "Sporty", "Classic", "Dapper"]
+            },
+            {
+                question: "Which of these sounds makes your pet's ears perk up the fastest?",
+                options: ["The crinkle of a soft blanket being adjusted.", "The jingle of a leash being picked up.", "The rustle of a treat bag being opened.", "A polite compliment from a neighbor."],
+                styles: ["Cozy", "Sporty", "Classic", "Dapper"]
+            }
+        ];
         
         // --- 2. State Variables ---
         let currentQuestionIndex = 0;
-        let selectedAnswers = new Array(QUIZ_DATA.length).fill(null); // Stores the index of the selected option
+        let selectedAnswers = new Array(QUIZ_DATA.length).fill(null); 
         
         // --- 3. DOM Element References ---
         const introCard = document.getElementById('intro-card');
@@ -258,4 +251,176 @@
         const progressBarFill = document.getElementById('progress-bar-fill');
         const nextBtn = document.getElementById('next-btn');
         const backBtn = document.getElementById('back-btn');
-        const startQuizBtn = document
+        const startQuizBtn = document.getElementById('start-quiz-btn');
+        const resultContent = document.getElementById('result-content');
+        const emailInput = document.getElementById('email-input');
+        const emailMessage = document.getElementById('email-message');
+
+
+        // --- 4. Core Functions ---
+        
+        function loadQuestion(index) {
+            if (index >= QUIZ_DATA.length) {
+                showResult();
+                return;
+            }
+
+            currentQuestionIndex = index;
+            const qData = QUIZ_DATA[index];
+
+            questionText.textContent = `Q${index + 1}: ${qData.question}`;
+            optionsContainer.innerHTML = ''; 
+            
+            qData.options.forEach((optionText, optionIndex) => {
+                const button = document.createElement('button');
+                button.textContent = optionText;
+                button.setAttribute('data-index', optionIndex);
+                button.onclick = () => selectOption(optionIndex);
+                
+                if (selectedAnswers[index] === optionIndex) {
+                    button.classList.add('selected');
+                }
+                optionsContainer.appendChild(button);
+            });
+            
+            updateProgress();
+            updateNavigationButtons();
+        }
+
+        function selectOption(optionIndex) {
+            selectedAnswers[currentQuestionIndex] = optionIndex;
+            
+            Array.from(optionsContainer.children).forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            optionsContainer.children[optionIndex].classList.add('selected');
+            
+            nextBtn.disabled = false;
+        }
+
+        function updateProgress() {
+            const totalQuestions = QUIZ_DATA.length;
+            const currentQ = currentQuestionIndex + 1;
+            const percent = Math.round((currentQ / totalQuestions) * 100);
+
+            progressText.textContent = `Q ${currentQ} / ${totalQuestions}`;
+            progressPercent.textContent = `${percent}% Complete`;
+            progressBarFill.style.width = `${percent}%`;
+        }
+
+        function updateNavigationButtons() {
+            if (currentQuestionIndex > 0) {
+                backBtn.classList.remove('hidden');
+                backBtn.disabled = false;
+            } else {
+                backBtn.classList.add('hidden');
+                backBtn.disabled = true;
+            }
+
+            const isLastQuestion = currentQuestionIndex === QUIZ_DATA.length - 1;
+            nextBtn.textContent = isLastQuestion ? "View Paw-sona →" : "Next Question →";
+            nextBtn.disabled = selectedAnswers[currentQuestionIndex] === null;
+        }
+        
+        function navigate(direction) {
+            if (direction === 'next' && currentQuestionIndex < QUIZ_DATA.length) {
+                loadQuestion(currentQuestionIndex + 1);
+            } else if (direction === 'back' && currentQuestionIndex > 0) {
+                loadQuestion(currentQuestionIndex - 1);
+            }
+        }
+
+        function calculateResult() {
+            const styleCounts = {}; 
+            let maxCount = 0;
+            let resultStyle = "Classic"; // Default
+
+            selectedAnswers.forEach((answerIndex, questionIndex) => {
+                if (answerIndex !== null) {
+                    const style = QUIZ_DATA[questionIndex].styles[answerIndex];
+                    styleCounts[style] = (styleCounts[style] || 0) + 1;
+                    
+                    if (styleCounts[style] > maxCount) {
+                        maxCount = styleCounts[style];
+                        resultStyle = style;
+                    }
+                }
+            });
+
+            return resultStyle;
+        }
+        
+        // Simplified showResult function (NO image logic)
+        function showResult() {
+            const resultStyle = calculateResult(); 
+            
+            quizCard.classList.add('hidden');
+            resultCard.classList.remove('hidden');
+            
+            let resultHTML = `
+                <h2 class="text-3xl font-extrabold text-coral-button mb-4">
+                    🎉 Your Paw-sona is the <span class="uppercase">${resultStyle}</span>!
+                </h2>
+                <p class="text-lg text-gray-700 mb-6 font-semibold">
+                    Congratulations! Your pet's primary style is **${resultStyle}**. 
+                    Click below to claim your discount and explore the collection!
+                </p>
+            `;
+            
+            resultContent.innerHTML = resultHTML;
+        }
+        
+        // --- 5. Event Handlers and Initial Setup ---
+        
+        function startQuiz() {
+            introCard.classList.add('hidden');
+            quizCard.classList.remove('hidden');
+            loadQuestion(0);
+        }
+        
+        function claimDiscount() {
+            const email = emailInput.value.trim();
+            emailMessage.textContent = '';
+            
+            if (email === "") {
+                emailMessage.textContent = "Email is required to claim the discount.";
+                return;
+            }
+            if (!email.includes('@') || !email.includes('.')) {
+                emailMessage.textContent = "Please enter a valid email address.";
+                return;
+            }
+            
+            emailMessage.textContent = "Success! Check your inbox for your 10% off code. Happy shopping! 🎁";
+            emailMessage.classList.remove('text-red-500');
+            emailMessage.classList.add('text-green-600', 'font-bold');
+        }
+        
+        function resetQuiz() {
+            currentQuestionIndex = 0;
+            selectedAnswers = new Array(QUIZ_DATA.length).fill(null);
+            resultCard.classList.add('hidden');
+            introCard.classList.remove('hidden');
+            emailMessage.textContent = ''; 
+            emailInput.value = '';
+            emailMessage.classList.remove('text-green-600', 'font-bold');
+            emailMessage.classList.add('text-red-500'); 
+        }
+
+        // Attach event listeners after the document is loaded (Fixes the Start Button Issue)
+        document.addEventListener('DOMContentLoaded', () => {
+            if (startQuizBtn) {
+                startQuizBtn.addEventListener('click', startQuiz);
+            }
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => navigate('next'));
+            }
+            if (backBtn) {
+                backBtn.addEventListener('click', () => navigate('back'));
+            }
+        });
+
+    </script>
+</body>
+
+</html>
